@@ -1,0 +1,13 @@
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\bin\Debug\WarehouseSystem.exe.config
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.csprojResolveAssemblyReference.cache
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.CustomerFrom.CustomerList.resources
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.Main.resources
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.Properties.Resources.resources
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.PurchaseOrder.PurchaseOrderList.resources
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.SalesFrom.SalesList.resources
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.ShoopingFrom.ShoopingMain.resources
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.ShoopingFrom.ShoopingTypeList.resources
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.StockFrom.StockList.resources
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.SuppliersFrom.SuppliersList.resources
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.Test.TestForm1.resources
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.csproj.GenerateResource.Cache

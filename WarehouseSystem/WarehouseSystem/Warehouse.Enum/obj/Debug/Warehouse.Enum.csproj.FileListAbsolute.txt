@@ -1,0 +1,5 @@
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Enum\bin\Debug\Warehouse.Enum.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Enum\bin\Debug\Warehouse.Enum.pdb
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Enum\obj\Debug\Warehouse.Enum.csprojResolveAssemblyReference.cache
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Enum\obj\Debug\Warehouse.Enum.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Enum\obj\Debug\Warehouse.Enum.pdb

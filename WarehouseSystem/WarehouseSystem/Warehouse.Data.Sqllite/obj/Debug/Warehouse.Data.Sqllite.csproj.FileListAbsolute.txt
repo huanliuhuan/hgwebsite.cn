@@ -1,0 +1,1 @@
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Data.Sqllite\obj\Debug\Warehouse.Data.Sqllite.csprojResolveAssemblyReference.cache

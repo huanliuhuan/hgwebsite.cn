@@ -1,0 +1,5 @@
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Data\bin\Debug\Warehouse.Data.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Data\bin\Debug\Warehouse.Data.pdb
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Data\obj\Debug\Warehouse.Data.csprojResolveAssemblyReference.cache
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Data\obj\Debug\Warehouse.Data.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Data\obj\Debug\Warehouse.Data.pdb

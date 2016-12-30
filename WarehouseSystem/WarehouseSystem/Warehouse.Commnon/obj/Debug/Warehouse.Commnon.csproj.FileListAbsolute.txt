@@ -1,0 +1,9 @@
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Commnon\bin\Debug\Warehouse.Commnon.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Commnon\bin\Debug\Warehouse.Commnon.pdb
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Commnon\bin\Debug\Warehouse.Struct.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Commnon\bin\Debug\Warehouse.Enum.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Commnon\bin\Debug\Warehouse.Struct.pdb
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Commnon\bin\Debug\Warehouse.Enum.pdb
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Commnon\obj\Debug\Warehouse.Commnon.csprojResolveAssemblyReference.cache
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Commnon\obj\Debug\Warehouse.Commnon.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\Warehouse.Commnon\obj\Debug\Warehouse.Commnon.pdb
