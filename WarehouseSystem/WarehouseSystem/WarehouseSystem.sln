@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarehouseSystem", "WarehouseSystem\WarehouseSystem.csproj", "{4F7058B2-3E82-41B9-800C-D917532A0D02}"
-EndProject
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Model", "Warehouse.Model\Warehouse.Model.csproj", "{C48419B3-665D-4A25-BB51-F71C1F284570}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Dal", "Warehouse.Dal\Warehouse.Dal.csproj", "{EB606866-D84C-4589-B378-4DCDCE87600B}"
@@ -21,52 +21,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Enum", "Warehouse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Commnon", "Warehouse.Commnon\Warehouse.Commnon.csproj", "{6FC9472C-7249-48EE-A8BA-353B30955FC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MYHGTOOLS", "MYHGTOOLS\MYHGTOOLS.csproj", "{78E82590-A72C-4050-873F-BFE5F3EC6CCB}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 11
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://hgwebsitecn.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Warehouse.Bll\\Warehouse.Bll.csproj
-		SccProjectName1 = Warehouse.Bll
-		SccLocalPath1 = Warehouse.Bll
-		SccProjectUniqueName2 = Warehouse.Commnon\\Warehouse.Commnon.csproj
-		SccProjectName2 = Warehouse.Commnon
-		SccLocalPath2 = Warehouse.Commnon
-		SccProjectUniqueName3 = Warehouse.Dal\\Warehouse.Dal.csproj
-		SccProjectName3 = Warehouse.Dal
-		SccLocalPath3 = Warehouse.Dal
-		SccProjectUniqueName4 = Warehouse.Data.Sqllite\\Warehouse.Data.Sqllite.csproj
-		SccProjectName4 = Warehouse.Data.Sqllite
-		SccLocalPath4 = Warehouse.Data.Sqllite
-		SccProjectUniqueName5 = Warehouse.Data\\Warehouse.Data.csproj
-		SccProjectName5 = Warehouse.Data
-		SccLocalPath5 = Warehouse.Data
-		SccProjectUniqueName6 = Warehouse.Enum\\Warehouse.Enum.csproj
-		SccProjectName6 = Warehouse.Enum
-		SccLocalPath6 = Warehouse.Enum
-		SccProjectUniqueName7 = Warehouse.Facroty\\Warehouse.Facroty.csproj
-		SccProjectName7 = Warehouse.Facroty
-		SccLocalPath7 = Warehouse.Facroty
-		SccProjectUniqueName8 = Warehouse.Model\\Warehouse.Model.csproj
-		SccProjectName8 = Warehouse.Model
-		SccLocalPath8 = Warehouse.Model
-		SccProjectUniqueName9 = Warehouse.Struct\\Warehouse.Struct.csproj
-		SccProjectName9 = Warehouse.Struct
-		SccLocalPath9 = Warehouse.Struct
-		SccProjectUniqueName10 = WarehouseSystem\\WarehouseSystem.csproj
-		SccProjectName10 = WarehouseSystem
-		SccLocalPath10 = WarehouseSystem
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4F7058B2-3E82-41B9-800C-D917532A0D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F7058B2-3E82-41B9-800C-D917532A0D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F7058B2-3E82-41B9-800C-D917532A0D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F7058B2-3E82-41B9-800C-D917532A0D02}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C48419B3-665D-4A25-BB51-F71C1F284570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C48419B3-665D-4A25-BB51-F71C1F284570}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C48419B3-665D-4A25-BB51-F71C1F284570}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -103,6 +65,10 @@ Global
 		{6FC9472C-7249-48EE-A8BA-353B30955FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FC9472C-7249-48EE-A8BA-353B30955FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FC9472C-7249-48EE-A8BA-353B30955FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E82590-A72C-4050-873F-BFE5F3EC6CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E82590-A72C-4050-873F-BFE5F3EC6CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E82590-A72C-4050-873F-BFE5F3EC6CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E82590-A72C-4050-873F-BFE5F3EC6CCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

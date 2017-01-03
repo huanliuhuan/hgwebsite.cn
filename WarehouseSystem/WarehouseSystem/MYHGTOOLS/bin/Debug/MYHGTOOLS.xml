@@ -1,0 +1,3151 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MYHGTOOLS</name>
+    </assembly>
+    <members>
+        <member name="T:code93.MYHGTOOLS.Code93Operation">
+            <summary>
+            创建者：刘欢
+            创建时间：2014-10-14
+            说明：条形码
+            </summary>
+        </member>
+        <member name="T:MYHGTOOLS.Common">
+            <summary>
+            创建人：刘欢
+            创建日期：2014-10-13
+            说明：公共方法
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.Common.ReturnException(System.Exception)">
+            <summary>
+            返回错误信息
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="F:MYHGTOOLS.com.EffentNextType.None">
+            <summary>
+            对其他语句无任何影响 
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.com.EffentNextType.WhenHaveContine">
+            <summary>
+            当前语句必须为"select count(1) from .."格式，如果存在则继续执行，不存在回滚事务
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.com.EffentNextType.WhenNoHaveContine">
+            <summary>
+            当前语句必须为"select count(1) from .."格式，如果不存在则继续执行，存在回滚事务
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.com.EffentNextType.ExcuteEffectRows">
+            <summary>
+            当前语句影响到的行数必须大于0，否则回滚事务
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.com.EffentNextType.SolicitationEvent">
+            <summary>
+            引发事件-当前语句必须为"select count(1) from .."格式，如果不存在则继续执行，存在回滚事务
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.ConfigHelper.GetConfigString(System.String)">
+            <summary>
+            得到AppSettings中的配置字符串信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.ConfigHelper.GetConfigBool(System.String)">
+            <summary>
+            得到AppSettings中的配置Bool信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.ConfigHelper.GetConfigDecimal(System.String)">
+            <summary>
+            得到AppSettings中的配置Decimal信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.ConfigHelper.GetConfigInt(System.String)">
+            <summary>
+            得到AppSettings中的配置int信息
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.ConvertoJSON">
+            <summary>
+            ConvertoJSON 的摘要说明
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.ConvertoJSON.ListToJson``1(System.Collections.Generic.IList{``0},System.String)">
+            <summary>   
+            List转成json    
+            </summary>   
+            <typeparam name="T"></typeparam>   
+            <param name="jsonName"></param>   
+            <param name="list"></param>   
+            <returns></returns>   
+        </member>
+        <member name="M:MYHGTOOLS.ConvertoJSON.ListToJson``1(System.Collections.Generic.IList{``0})">
+            <summary>   
+            List转成json    
+            </summary>   
+            <typeparam name="T"></typeparam>   
+            <param name="list"></param>   
+            <returns></returns>   
+        </member>
+        <member name="M:MYHGTOOLS.ConvertoJSON.ToJson(System.Object)">
+            <summary>    
+            对象转换为Json字符串    
+            </summary>    
+            <param name="jsonObject">对象</param>    
+            <returns>Json字符串</returns>    
+        </member>
+        <member name="M:MYHGTOOLS.ConvertoJSON.ToJson(System.Collections.IEnumerable)">
+            <summary>    
+            对象集合转换Json    
+            </summary>    
+            <param name="array">集合对象</param>    
+            <returns>Json字符串</returns>    
+        </member>
+        <member name="M:MYHGTOOLS.ConvertoJSON.ToArrayString(System.Collections.IEnumerable)">
+            <summary>    
+            普通集合转换Json    
+            </summary>    
+            <param name="array">集合对象</param>    
+            <returns>Json字符串</returns>    
+        </member>
+        <member name="M:MYHGTOOLS.ConvertoJSON.ToJson(System.Data.DataTable)">
+            <summary>    
+            Datatable转换为Json    
+            </summary>    
+            <param name="table">Datatable对象</param>    
+            <returns>Json字符串</returns>    
+        </member>
+        <member name="M:MYHGTOOLS.ConvertoJSON.ToJson(System.Data.DataTable,System.String)">
+            <summary>   
+            DataTable转成Json    
+            </summary>   
+            <param name="jsonName"></param>   
+            <param name="dt"></param>   
+            <returns></returns>   
+        </member>
+        <member name="M:MYHGTOOLS.ConvertoJSON.ToJson(System.Data.Common.DbDataReader)">
+            <summary>    
+            DataReader转换为Json    
+            </summary>    
+            <param name="dataReader">DataReader对象</param>    
+            <returns>Json字符串</returns>    
+        </member>
+        <member name="M:MYHGTOOLS.ConvertoJSON.ToJson(System.Data.DataSet)">
+            <summary>    
+            DataSet转换为Json    
+            </summary>    
+            <param name="dataSet">DataSet对象</param>    
+            <returns>Json字符串</returns>    
+        </member>
+        <member name="M:MYHGTOOLS.ConvertoJSON.String2Json(System.String)">
+            <summary>   
+            过滤特殊字符   
+            </summary>   
+            <param name="s"></param>   
+            <returns></returns>   
+        </member>
+        <member name="M:MYHGTOOLS.ConvertoJSON.StringFormat(System.String,System.Type)">
+            <summary>   
+            格式化字符型、日期型、布尔型   
+            </summary>   
+            <param name="str"></param>   
+            <param name="type"></param>   
+            <returns></returns>   
+        </member>
+        <member name="M:MYHGTOOLS.ConvertXMLToDataSet.#ctor">
+            <summary>
+            将xml对象内容字符串转换为DataSet
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.ConvertXMLToDataSet.DeserializeFromXml(System.String,System.Type)">
+            <summary>
+            反序列化
+            接收2个参数:xmlFilePath(需要反序列化的XML文件的绝对路径),type(反序列化XML为哪种对象类型)
+            </summary>
+            <param name="xmlFilePath"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.ConvertXMLToDataSet.Deserialize(System.Type,System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="type">类型</param>
+            <param name="xml">XML字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.ConvertXMLToDataSet.ObjListToXml``1(System.Collections.Generic.List{``0},System.String)">
+            <summary>
+             实体类序列化成xml
+            </summary>
+            <param name="enitities">The enitities.</param>
+            <param name="headtag">The headtag.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.ConvertXMLToDataSet.Deserialize(System.Type,System.IO.Stream)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="type"></param>
+            <param name="xml"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.ConvertXMLToDataSet.Serializer(System.Type,System.Object)">
+            <summary>
+            序列化
+            </summary>
+            <param name="type">类型</param>
+            <param name="obj">对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.ConvertXMLToJson">
+            <summary>
+            创建人：刘欢
+            创建时间：2015年1月8日 21:59:37
+            说明：将XML转换为json
+            </summary>
+        </member>
+        <member name="T:MYHGTOOLS.CookieOperation">
+            <summary>
+            创建人：刘欢
+            创建日期：2014-10-13
+            说明：关于cookie的操作
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.CookieOperation.CreateCookie(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            创建cookie
+            </summary>
+            <param name="cookeName">cookie名称</param>
+            <param name="cookieValue">cookie值</param>
+            <param name="cookieTime">cookie存取时间</param>
+            <param name="type">判断分钟数或天数0为分钟1为天</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.CookieOperation.ReadCookie(System.String)">
+            <summary>
+            读取cookie
+            </summary>
+            <param name="cookieName">cookie名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.CookieOperation.DeleteCookie(System.String)">
+            <summary>
+            删除cookies
+            </summary>
+            <param name="cookieName">cookie名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.CreateSql">
+            <summary>
+            创建人：刘欢
+            创建时间：2014年11月14日 10:13:32
+            说明：sql
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.CreateSql.SqlInsert">
+            <summary>
+            插入的sql语句
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.CreateSql.SqlUpdate">
+            <summary>
+            修改的Sql语句
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.CreateSql.SqlDelete">
+            <summary>
+            删除SQl语句
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.CreateSql.SqlSelect">
+            <summary>
+            查找数据
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.CreateSql.PageSel">
+            <summary>
+            分页sql语句,说明{0}字段's {1}排序字段{2} 正序还是倒叙 DESC(倒叙) ASC(正序) {3}表名 {4}筛选条件 {5}开始条数 {6}结束条数
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.CreateSql.RecordCount">
+            <summary>
+            总记录数{0} 表名 {1} 筛选条件
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.CreateSql.GroupSelect">
+            <summary>
+            分组{0}字段 {1} 表明 {2} 排序字段 {3}排序字段 {4}正序或是序号 {5}开始位置{6}页面大小
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.CreateSql.tempSelect">
+            <summary>
+            计算总行数
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.DataCache.GetCache(System.String)">
+            <summary>
+            获取当前应用程序指定CacheKey的Cache值
+            </summary>
+            <param name="CacheKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DataCache.SetCache(System.String,System.Object)">
+            <summary>
+            设置当前应用程序指定CacheKey的Cache值
+            </summary>
+            <param name="CacheKey"></param>
+            <param name="objObject"></param>
+        </member>
+        <member name="M:MYHGTOOLS.DataCache.SetCache(System.String,System.Object,System.DateTime,System.TimeSpan)">
+            <summary>
+            设置当前应用程序指定CacheKey的Cache值
+            </summary>
+            <param name="CacheKey"></param>
+            <param name="objObject"></param>
+        </member>
+        <member name="T:MYHGTOOLS.DataCompressHelper">
+            <summary>
+            创建人：刘欢
+            创建时间：2014年12月31日 22:40:36
+            说明：对字符串进行压缩
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.DataCompressHelper.CompressString(System.String)">
+            <summary>
+            压缩
+            </summary>
+            <param name="SourceString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DataCompressHelper.CompressBytes(System.Byte[])">
+            <summary>
+            压缩字节
+            </summary>
+            <param name="SourceByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DataCompressHelper.CompressStream(System.IO.Stream)">
+            <summary>
+            给SourceStream进行压缩
+            </summary>
+            <param name="SourceStream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DataCompressHelper.CopyStream(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            复制一个字节流
+            </summary>
+            <param name="input"></param>
+            <param name="output"></param>
+        </member>
+        <member name="M:MYHGTOOLS.DataCompressHelper.DecompressString(System.String)">
+            <summary>
+            解压
+            </summary>
+            <param name="SourceString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DataCompressHelper.DecompressBytes(System.Byte[])">
+            <summary>
+            解压字节
+            </summary>
+            <param name="SourceByte"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DataCompressHelper.DecompressStream(System.IO.Stream)">
+            <summary>
+            解压流
+            </summary>
+            <param name="SourceStream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.DataTableHandler`1">
+            <summary>
+            Datatable操作类
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.DataTableHandler`1.GetList(System.Data.DataTable)">
+            <summary>
+            将数据表转化成list对象
+            </summary>
+            <returns>返回list对象</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DataTableHandler`1.TableToList``1(System.Data.DataTable)">
+            <summary>
+            将DataTable转换为list
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="tbl"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DataTableHandler`1.ValueFieldsAndParam(`0)">
+            <summary>
+            获取添加字段和添加参数
+            </summary>
+            <param name="Model"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DataTableHandler`1.GetDataTableFromIList``1(System.Collections.Generic.List{``0})">
+            <summary>
+            将list转换为DataTable
+            注意：该方法不允许有?值类型System.Nullable`1
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="aIList"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.DbHelperOra">
+            <summary> 
+            创建人：刘欢
+            创建时间：2015年1月8日 22:28:56
+            注意：必须配置connStringOracle
+            配置方法：http://www.cnblogs.com/myblogslh/p/4212105.html
+            说明：
+            Copyright (C) Maticsoft 
+            数据访问基础类(基于Oracle) 
+            可以用户可以修改满足自己项目的需要。 
+            </summary> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.ExecuteSql(System.String)">
+            <summary> 
+            执行SQL语句，返回影响的记录数 
+            </summary> 
+            <param name="SQLString">SQL语句</param> 
+            <returns>影响的记录数</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.ExecuteSqlTran(System.Collections.ArrayList)">
+            <summary> 
+            执行多条SQL语句，实现数据库事务。 
+            </summary> 
+            <param name="SQLStringList">多条SQL语句</param>   
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.ExecuteSql(System.String,System.String)">
+            <summary> 
+            执行带一个存储过程参数的的SQL语句。 
+            </summary> 
+            <param name="SQLString">SQL语句</param> 
+            <param name="content">参数内容,比如一个字段是格式复杂的文章，有特殊符号，可以通过这个方式添加</param> 
+            <returns>影响的记录数</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.ExecuteSqlInsertImg(System.String,System.Byte[])">
+            <summary> 
+            向数据库里插入图像格式的字段(和上面情况类似的另一种实例) 
+            </summary> 
+            <param name="strSQL">SQL语句</param> 
+            <param name="fs">图像字节,数据库的字段类型为image的情况</param> 
+            <returns>影响的记录数</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.GetSingle(System.String)">
+            <summary> 
+            执行一条计算查询结果语句，返回查询结果（object）。 
+            </summary> 
+            <param name="SQLString">计算查询结果语句</param> 
+            <returns>查询结果（object）</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.ExecuteReader(System.String)">
+            <summary> 
+            执行查询语句，返回OracleDataReader ( 注意：调用该方法后，一定要对SqlDataReader进行Close ) 
+            </summary> 
+            <param name="strSQL">查询语句</param> 
+            <returns>OracleDataReader</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.Query(System.String)">
+            <summary> 
+            执行查询语句，返回DataSet 
+            </summary> 
+            <param name="SQLString">查询语句</param> 
+            <returns>DataSet</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.ExecuteSql(System.String,System.Data.OracleClient.OracleParameter[])">
+            <summary> 
+            执行SQL语句，返回影响的记录数 
+            </summary> 
+            <param name="SQLString">SQL语句</param> 
+            <returns>影响的记录数</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.ExecuteSqlTran(System.Collections.Hashtable)">
+            <summary> 
+            执行多条SQL语句，实现数据库事务。 
+            </summary> 
+            <param name="SQLStringList">SQL语句的哈希表（key为sql语句，value是该语句的OracleParameter[]）</param> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.GetSingle(System.String,System.Data.OracleClient.OracleParameter[])">
+            <summary> 
+            执行一条计算查询结果语句，返回查询结果（object）。 
+            </summary> 
+            <param name="SQLString">计算查询结果语句</param> 
+            <returns>查询结果（object）</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.ExecuteReader(System.String,System.Data.OracleClient.OracleParameter[])">
+            <summary> 
+            执行查询语句，返回OracleDataReader ( 注意：调用该方法后，一定要对SqlDataReader进行Close ) 
+            </summary> 
+            <param name="strSQL">查询语句</param> 
+            <returns>OracleDataReader</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.Query(System.String,System.Data.OracleClient.OracleParameter[])">
+            <summary> 
+            执行查询语句，返回DataSet 
+            </summary> 
+            <param name="SQLString">查询语句</param> 
+            <returns>DataSet</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.RunProcedure(System.String,System.Data.IDataParameter[])">
+            <summary> 
+            执行存储过程 返回SqlDataReader ( 注意：调用该方法后，一定要对SqlDataReader进行Close ) 
+            </summary> 
+            <param name="storedProcName">存储过程名</param> 
+            <param name="parameters">存储过程参数</param> 
+            <returns>OracleDataReader</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.RunProcedure(System.String,System.Data.IDataParameter[],System.String)">
+            <summary> 
+            执行存储过程 
+            </summary> 
+            <param name="storedProcName">存储过程名</param> 
+            <param name="parameters">存储过程参数</param> 
+            <param name="tableName">DataSet结果中的表名</param> 
+            <returns>DataSet</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.BuildQueryCommand(System.Data.OracleClient.OracleConnection,System.String,System.Data.IDataParameter[])">
+            <summary> 
+            构建 OracleCommand 对象(用来返回一个结果集，而不是一个整数值) 
+            </summary> 
+            <param name="connection">数据库连接</param> 
+            <param name="storedProcName">存储过程名</param> 
+            <param name="parameters">存储过程参数</param> 
+            <returns>OracleCommand</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.RunProcedure(System.String,System.Data.IDataParameter[],System.Int32@)">
+            <summary> 
+            执行存储过程，返回影响的行数   
+            </summary> 
+            <param name="storedProcName">存储过程名</param> 
+            <param name="parameters">存储过程参数</param> 
+            <param name="rowsAffected">影响的行数</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperOra.BuildIntCommand(System.Data.OracleClient.OracleConnection,System.String,System.Data.IDataParameter[])">
+            <summary> 
+            创建 OracleCommand 对象实例(用来返回一个整数值)  
+            </summary> 
+            <param name="storedProcName">存储过程名</param> 
+            <param name="parameters">存储过程参数</param> 
+            <returns>OracleCommand 对象实例</returns> 
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ColumnExists(System.String,System.String)">
+            <summary>
+            判断是否存在某表的某个字段
+            </summary>
+            <param name="tableName">表名称</param>
+            <param name="columnName">列名称</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.TabExists(System.String)">
+            <summary>
+            表是否存在
+            </summary>
+            <param name="TableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSql(System.String)">
+            <summary>
+            执行SQL语句，返回影响的记录数
+            </summary>
+            <param name="SQLString">SQL语句</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSql(System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.String)">
+            <summary>
+            2012-2-21新增重载，执行SQL语句，返回影响的记录数
+            </summary>
+            <param name="connection">SqlConnection对象</param>
+            <param name="trans">SqlTransaction事件</param>
+            <param name="SQLString">SQL语句</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSqlTran(System.Collections.Generic.List{MYHGTOOLS.com.CommandInfo},System.Collections.Generic.List{MYHGTOOLS.com.CommandInfo})">
+            <summary>
+            执行Sql和Oracle滴混合事务
+            </summary>
+            <param name="list">SQL命令行列表</param>
+            <param name="oracleCmdSqlList">Oracle命令行列表</param>
+            <returns>执行结果 0-由于SQL造成事务失败 -1 由于Oracle造成事务失败 1-整体事务执行成功</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSqlTran(System.Collections.Generic.List{System.String})">
+            <summary>
+            执行多条SQL语句，实现数据库事务。
+            </summary>
+            <param name="SQLStringList">多条SQL语句</param>		
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSql(System.String,System.String)">
+            <summary>
+            执行带一个存储过程参数的的SQL语句。
+            </summary>
+            <param name="SQLString">SQL语句</param>
+            <param name="content">参数内容,比如一个字段是格式复杂的文章，有特殊符号，可以通过这个方式添加</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSqlGet(System.String,System.String)">
+            <summary>
+            执行带一个存储过程参数的的SQL语句。
+            </summary>
+            <param name="SQLString">SQL语句</param>
+            <param name="content">参数内容,比如一个字段是格式复杂的文章，有特殊符号，可以通过这个方式添加</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSqlInsertImg(System.String,System.Byte[])">
+            <summary>
+            向数据库里插入图像格式的字段(和上面情况类似的另一种实例)
+            </summary>
+            <param name="strSQL">SQL语句</param>
+            <param name="fs">图像字节,数据库的字段类型为image的情况</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.GetSingle(System.String)">
+            <summary>
+            执行一条计算查询结果语句，返回查询结果（object）。
+            </summary>
+            <param name="SQLString">计算查询结果语句</param>
+            <returns>查询结果（object）</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteReader(System.String)">
+            <summary>
+            执行查询语句，返回SqlDataReader ( 注意：调用该方法后，一定要对SqlDataReader进行Close )
+            </summary>
+            <param name="strSQL">查询语句</param>
+            <returns>SqlDataReader</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.Query(System.String)">
+            <summary>
+            执行查询语句，返回DataSet
+            </summary>
+            <param name="SQLString">查询语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.Query(System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.String)">
+            <summary>
+            2012-2-21新增重载，执行查询语句，返回DataSet
+            </summary>
+            <param name="connection">SqlConnection对象</param>
+            <param name="trans">SqlTransaction事务</param>
+            <param name="SQLString">SQL语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSql(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行SQL语句，返回影响的记录数
+            </summary>
+            <param name="SQLString">SQL语句</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSql(System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            2012-2-29新增重载，执行SQL语句，返回影响的记录数
+            </summary>
+            <param name="connection">SqlConnection对象</param>
+            <param name="trans">SqlTransaction对象</param>
+            <param name="SQLString">SQL语句</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSqlTran(System.Collections.Hashtable)">
+            <summary>
+            执行多条SQL语句，实现数据库事务。
+            </summary>
+            <param name="SQLStringList">SQL语句的哈希表（key为sql语句，value是该语句的SqlParameter[]）</param>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSqlTran(System.Collections.Generic.List{MYHGTOOLS.com.CommandInfo})">
+            <summary>
+            执行多条SQL语句，实现数据库事务。
+            </summary>
+            <param name="SQLStringList">SQL语句的哈希表（key为sql语句，value是该语句的SqlParameter[]）</param>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSqlTranWithIndentity(System.Collections.Generic.List{MYHGTOOLS.com.CommandInfo})">
+            <summary>
+            执行多条SQL语句，实现数据库事务。
+            </summary>
+            <param name="SQLStringList">SQL语句的哈希表（key为sql语句，value是该语句的SqlParameter[]）</param>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteSqlTranWithIndentity(System.Collections.Hashtable)">
+            <summary>
+            执行多条SQL语句，实现数据库事务。
+            </summary>
+            <param name="SQLStringList">SQL语句的哈希表（key为sql语句，value是该语句的SqlParameter[]）</param>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.GetSingle(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行一条计算查询结果语句，返回查询结果（object）。
+            </summary>
+            <param name="SQLString">计算查询结果语句</param>
+            <returns>查询结果（object）</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.AddSinger(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行一条计算查询结果语句，返回查询结果（object）。
+            </summary>
+            <param name="SQLString">计算查询结果语句</param>
+            <returns>查询结果（object）</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.GetSingle(System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            2012-2-21新增重载，执行一条计算查询结果语句，返回查询结果（object）。
+            </summary>
+            <param name="connection">SqlConnection对象</param>
+            <param name="trans">SqlTransaction事务</param>
+            <param name="SQLString">计算查询结果语句</param>
+            <returns>查询结果（object）</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.ExecuteReader(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行查询语句，返回SqlDataReader ( 注意：调用该方法后，一定要对SqlDataReader进行Close )
+            </summary>
+            <param name="strSQL">查询语句</param>
+            <returns>SqlDataReader</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.Query(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行查询语句，返回DataSet
+            </summary>
+            <param name="SQLString">查询语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.Query(System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            2012-2-21新增重载，执行查询语句，返回DataSet
+            </summary>
+            <param name="connection">SqlConnection对象</param>
+            <param name="trans">SqlTransaction事务</param>
+            <param name="SQLString">查询语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.RunProcedure(System.String,System.Data.IDataParameter[])">
+            <summary>
+            执行存储过程，返回SqlDataReader ( 注意：调用该方法后，一定要对SqlDataReader进行Close )
+            </summary>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <returns>SqlDataReader</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.RunProcedure(System.String,System.Data.IDataParameter[],System.String)">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <param name="tableName">DataSet结果中的表名</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.BuildQueryCommand(System.Data.SqlClient.SqlConnection,System.String,System.Data.IDataParameter[])">
+            <summary>
+            构建 SqlCommand 对象(用来返回一个结果集，而不是一个整数值)
+            </summary>
+            <param name="connection">数据库连接</param>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <returns>SqlCommand</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.RunProcedure(System.String,System.Data.IDataParameter[],System.Int32@)">
+            <summary>
+            执行存储过程，返回影响的行数		
+            </summary>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <param name="rowsAffected">影响的行数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DbHelperSQL.BuildIntCommand(System.Data.SqlClient.SqlConnection,System.String,System.Data.IDataParameter[])">
+            <summary>
+            创建 SqlCommand 对象实例(用来返回一个整数值)	
+            </summary>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <returns>SqlCommand 对象实例</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.GetHttpRoot">
+             <summary>
+            返回http根路径 如：http://localhost:3249/
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.GetHttpPath">
+             <summary>
+            返回http路径 如：http://localhost:3249/web/
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.GetHttps">
+            <summary>
+            根据当前运行环境判断返回http路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.CreateDir(System.String)">
+            <summary>
+            创建目录
+            </summary>
+            <param name="dir">此地路径相对站点而言</param>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.CreateFolder(System.String)">
+            <summary>
+            创建目录路径
+            </summary>
+            <param name="folderPath">物理路径</param>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.DeleteDir(System.String)">
+            <summary>
+            删除目录
+            </summary>
+            <param name="dir">此地路径相对站点而言</param>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.FileExists(System.String)">
+            <summary>
+            判断文件是否存在
+            </summary>
+            <param name="file">格式:a/b.htm,相对根目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.ReadFile(System.String)">
+            <summary>
+            读取文件内容
+            </summary>
+            <param name="file">格式:a/b.htm,相对根目录</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.SaveFile(System.String,System.String)">
+            <summary>
+            保存为不带Bom的文件
+            </summary>
+            <param name="TxtStr"></param>
+            <param name="tempDir">格式:a/b.htm,相对根目录</param>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.SaveFile(System.String,System.String,System.Boolean)">
+            <summary>
+            保存文件内容,自动创建目录
+            </summary>
+            <param name="TxtStr"></param>
+            <param name="tempDir">格式:a/b.htm,相对根目录</param>
+            <param name="noBom"></param>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.CopyFile(System.String,System.String,System.Boolean)">
+            <summary>
+            复制文件
+            </summary>
+            <param name="file1"></param>
+            <param name="file2"></param>
+            <param name="overwrite">如果已经存在是否覆盖？</param>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.DeleteFile(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="file">此地路径相对程序路径而言</param>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.GetFolderPath(System.String)">
+            <summary>
+            获得文件的目录路径
+            </summary>
+            <param name="filePath">文件路径</param>
+            <returns>以\结尾</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.GetMapPath(System.String)">
+            <summary>
+            获得当前绝对路径
+            </summary>
+            <param name="strPath">指定的虚拟路径</param>
+            <returns>绝对路径</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.GetFolderPath(System.Boolean,System.String)">
+            <summary>
+            获得文件的目录路径
+            </summary>
+            <param name="isUrl">是否是网址</param>
+            <param name="filePath">文件路径</param>
+            <returns>以\或/结尾</returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.GetFileName(System.String)">
+            <summary>
+            获得文件的名称
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.GetFileName(System.Boolean,System.String)">
+            <summary>
+            获得文件的名称
+            </summary>
+            <param name="isUrl">是否是网址</param>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.GetFileExt(System.String)">
+            <summary>
+            获得文件的后缀
+            不带点，小写
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.CopyDir(System.String,System.String)">
+            <summary>
+            目录拷贝
+            </summary>
+            <param name="OldDir"></param>
+            <param name="NewDir"></param>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.DelDir(System.String)">
+            <summary>
+            目录删除
+            </summary>
+            <param name="OldDir"></param>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.CopyAndDelDir(System.String,System.String)">
+            <summary>
+            目录剪切
+            </summary>
+            <param name="OldDirectory"></param>
+            <param name="NewDirectory"></param>
+        </member>
+        <member name="M:MYHGTOOLS.DirFile.DownloadFile(System.Web.HttpRequest,System.Web.HttpResponse,System.String,System.Int64)">
+            <summary>
+            文件下载
+            </summary>
+            <param name="_Request"></param>
+            <param name="_Response"></param>
+            <param name="_fullPath">源文件路径</param>
+            <param name="_speed"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.EntityHandler`1">
+            <summary>
+            实体转换类
+            </summary>
+            <typeparam name="T">实体</typeparam>
+        </member>
+        <member name="M:MYHGTOOLS.EntityHandler`1.FillModel(System.Data.DataSet)">
+            <summary>
+            填充对象列表：用DataSet的第一个表填充实体类
+            </summary>
+            <param name="ds">DataSet</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.EntityHandler`1.FillModel(System.Data.DataSet,System.Int32)">
+            <summary>  
+            填充对象列表：用DataSet的第index个表填充实体类
+            </summary>  
+        </member>
+        <member name="M:MYHGTOOLS.EntityHandler`1.FillModel(System.Data.DataTable)">
+            <summary>  
+            填充对象列表：用DataTable填充实体类
+            </summary>  
+        </member>
+        <member name="M:MYHGTOOLS.EntityHandler`1.FillModel(System.Data.DataRow)">
+            <summary>  
+            填充对象：用DataRow填充实体类
+            </summary>  
+        </member>
+        <member name="M:MYHGTOOLS.EntityHandler`1.FillDataSet(System.Collections.Generic.List{`0})">
+            <summary>
+            实体类转换成DataSet
+            </summary>
+            <param name="modelList">实体类列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.EntityHandler`1.FillDataTable(System.Collections.Generic.List{`0})">
+            <summary>
+            实体类转换成DataTable
+            </summary>
+            <param name="modelList">实体类列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.EntityHandler`1.CreateData(`0)">
+            <summary>
+            根据实体类得到表结构
+            </summary>
+            <param name="model">实体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.EntityHandler`1.ConvertToString(`0)">
+            <summary>
+            转换成字符串
+            </summary>
+            <param name="Model">实体</param>
+            <returns>返回字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.EntityHandler`1.ConvertToEntity(System.String)">
+            <summary>
+            将字符串转换成实体
+            </summary>
+            <param name="Str">字符串</param>
+            <returns>返回泛型实体</returns>
+        </member>
+        <member name="T:MYHGTOOLS.FTP.FTPClient">
+            <summary>  
+            FTPClient 的摘要说明。  
+            </summary>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.#ctor">
+            <summary>  
+            缺省构造函数  
+            </summary>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.#ctor(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>  
+            构造函数  
+            </summary>  
+            <param ></param>  
+            <param ></param>  
+            <param ></param>  
+            <param ></param>  
+            <param ></param>  
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPClient.RemoteHost">
+            <summary>  
+            FTP服务器IP地址  
+            </summary>  
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPClient.RemotePort">
+            <summary>  
+            FTP服务器端口  
+            </summary>  
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPClient.RemotePath">
+            <summary>  
+            当前服务器目录  
+            </summary> 
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPClient.RemoteUser">
+            <summary>  
+            登录用户账号  
+            </summary>  
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPClient.RemotePass">
+            <summary>  
+            用户登录密码  
+            </summary> 
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPClient.Connected">
+            <summary>  
+            是否登录  
+            </summary>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.Connect">
+            <summary>  
+            建立连接   
+            </summary>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.DisConnect">
+            <summary>  
+            关闭连接  
+            </summary>  
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:MYHGTOOLS.FTP.FTPClient.TransferType" -->
+        <member name="M:MYHGTOOLS.FTP.FTPClient.SetTransferType(MYHGTOOLS.FTP.FTPClient.TransferType)">
+            <summary>  
+            设置传输模式  
+            </summary>  
+            <param >传输模式</param>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.GetTransferType">
+            <summary>  
+            获得传输模式  
+            </summary>  
+            <returns>传输模式</returns>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.Dir(System.String)">
+            <summary>  
+            获得文件列表  
+            </summary>  
+            <param >文件名的匹配字符串</param>  
+            <returns></returns>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.GetFileSize(System.String)">
+            <summary>  
+            获取文件大小  
+            </summary>  
+            <param >文件名</param>  
+            <returns>文件大小</returns>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.Delete(System.String)">
+            <summary>  
+            删除  
+            </summary>  
+            <param >待删除文件名</param>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.Rename(System.String,System.String)">
+            <summary>  
+            重命名(如果新文件名与已有文件重名,将覆盖已有文件)  
+            </summary>  
+            <param >旧文件名</param>  
+            <param >新文件名</param>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.Get(System.String,System.String)">
+            <summary>  
+            下载一批文件  
+            </summary>  
+            <param >文件名的匹配字符串</param>  
+            <param >本地目录(不得以\结束)</param>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.Get(System.String,System.String,System.String)">
+            <summary>  
+            下载一个文件  
+            </summary>  
+            <param >要下载的文件名</param>  
+            <param >本地目录(不得以\结束)</param>  
+            <param >保存在本地时的文件名</param>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.Put(System.String,System.String)">
+            <summary>  
+            上传一批文件  
+            </summary>  
+            <param >本地目录(不得以\结束)</param>  
+            <param >文件名匹配字符(可以包含*和?)</param>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.Put(System.String)">
+            <summary>  
+            上传一个文件  
+            </summary>  
+            <param >本地文件名</param>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.MkDir(System.String)">
+            <summary>  
+            创建目录  
+            </summary>  
+            <param >目录名</param>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.RmDir(System.String)">
+            <summary>  
+            删除目录  
+            </summary>  
+            <param >目录名</param>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.ChDir(System.String)">
+            <summary>  
+            改变目录  
+            </summary>  
+            <param >新的工作目录名</param>  
+        </member>
+        <member name="F:MYHGTOOLS.FTP.FTPClient.strMsg">
+            <summary>  
+            服务器返回的应答信息(包含应答码)  
+            </summary>  
+        </member>
+        <member name="F:MYHGTOOLS.FTP.FTPClient.strReply">
+            <summary>  
+            服务器返回的应答信息(包含应答码)  
+            </summary>  
+        </member>
+        <member name="F:MYHGTOOLS.FTP.FTPClient.iReplyCode">
+            <summary>  
+            服务器返回的应答码  
+            </summary>  
+        </member>
+        <member name="F:MYHGTOOLS.FTP.FTPClient.socketControl">
+            <summary>  
+            进行控制连接的socket  
+            </summary>  
+        </member>
+        <member name="F:MYHGTOOLS.FTP.FTPClient.trType">
+            <summary>  
+            传输模式  
+            </summary>  
+        </member>
+        <member name="F:MYHGTOOLS.FTP.FTPClient.BLOCK_SIZE">
+            <summary>  
+            接收和发送数据的缓冲区  
+            </summary>  
+        </member>
+        <member name="F:MYHGTOOLS.FTP.FTPClient.ASCII">
+            <summary>  
+            编码方式  
+            </summary>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.ReadReply">
+            <summary>  
+            将一行应答字符串记录在strReply和strMsg  
+            应答码记录在iReplyCode  
+            </summary>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.CreateDataSocket">
+            <summary>  
+            建立进行数据连接的socket  
+            </summary>  
+            <returns>数据连接socket</returns>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.CloseSocketConnect">
+            <summary>  
+            关闭socket连接(用于登录以前)  
+            </summary>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.ReadLine">
+            <summary>  
+            读取Socket返回的所有字符串  
+            </summary>  
+            <returns>包含应答码的字符串行</returns>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPClient.SendCommand(System.String)">
+            <summary>  
+            发送命令并获取应答码和最后一行应答字符串  
+            </summary>  
+            <param >命令</param>  
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.#ctor(System.String,System.String,System.String)">
+            <summary>
+            创建FTP工具
+            <para>
+            默认不使用SSL,使用二进制传输方式,使用被动模式
+            </para>
+            </summary>
+            <param name="host">主机名称</param>
+            <param name="userId">用户名</param>
+            <param name="password">密码</param>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.#ctor(System.String,System.String,System.String,System.Int32,System.Net.IWebProxy,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            创建FTP工具
+            </summary>
+            <param name="host">主机名称</param>
+            <param name="userId">用户名</param>
+            <param name="password">密码</param>
+            <param name="port">端口</param>
+            <param name="enableSsl">允许Ssl</param>
+            <param name="proxy">代理</param>
+            <param name="useBinary">允许二进制</param>
+            <param name="usePassive">允许被动模式</param>
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPTools.Host">
+            <summary>
+            主机
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPTools.UserId">
+            <summary>
+            登录用户名
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPTools.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPTools.Proxy">
+            <summary>
+            代理
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPTools.Port">
+            <summary>
+            端口
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPTools.EnableSsl">
+            <summary>
+            EnableSsl 
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPTools.UsePassive">
+            <summary>
+            被动模式
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPTools.UseBinary">
+            <summary>
+            二进制方式
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPTools.RemotePath">
+            <summary>
+            远端路径
+            <para>
+                返回FTP服务器上的当前路径(可以是 / 或 /a/../ 的形式)
+            </para>
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.CreateRequest(System.String,System.String)">
+            <summary>
+            创建一个FTP请求
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="method">请求方法</param>
+            <returns>FTP请求</returns>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.Upload(System.IO.FileInfo,System.String)">
+            <summary>
+            把文件上传到FTP服务器的RemotePath下
+            </summary>
+            <param name="localFile">本地文件信息</param>
+            <param name="remoteFileName">要保存到FTP文件服务器上的名称</param>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.Download(System.String,System.String)">
+            <summary>
+            从当前目录下下载文件
+            <para>
+            如果本地文件存在,则从本地文件结束的位置开始下载.
+            </para>
+            </summary>
+            <param name="serverName">服务器上的文件名称</param>
+            <param name="localName">本地文件名称</param>
+            <returns>返回一个值,指示是否下载成功</returns>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.Rename(System.String,System.String)">
+            <summary>
+            文件更名
+            </summary>
+            <param name="oldFileName">原文件名</param>
+            <param name="newFileName">新文件名</param>
+            <returns>返回一个值,指示更名是否成功</returns>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.GetFileList">
+            <summary>
+            获取当前目录下文件列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.GetFileDetails">
+            <summary>
+            获取详细列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.DeleteFile(System.String)">
+            <summary>
+            删除FTP服务器上的文件
+            </summary>
+            <param name="fileName">文件名称</param>
+            <returns>返回一个值,指示是否删除成功</returns>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.MakeDirectory(System.String)">
+            <summary>
+            在当前目录下创建文件夹
+            </summary>
+            <param name="dirName">文件夹名称</param>
+            <returns>返回一个值,指示是否创建成功</returns>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.DeleteDirectory(System.String)">
+            <summary>
+            删除文件夹
+            </summary>
+            <param name="dirName">文件夹名称</param>
+            <returns>返回一个值,指示是否删除成功</returns>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.GetFileSize(System.String)">
+            <summary>
+            获取文件大小
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.Append(System.IO.FileInfo,System.String)">
+            <summary>
+            给FTP服务器上的文件追加内容
+            </summary>
+            <param name="localFile">本地文件</param>
+            <param name="remoteFileName">FTP服务器上的文件</param>
+            <returns>返回一个值,指示是否追加成功</returns>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.Append(System.IO.Stream,System.String)">
+            <summary>
+            给FTP服务器上的文件追加内容
+            </summary>
+            <param name="stream">数据流(可通过设置偏移来实现从特定位置开始上传)</param>
+            <param name="remoteFileName">FTP服务器上的文件</param>
+            <returns>返回一个值,指示是否追加成功</returns>
+        </member>
+        <member name="P:MYHGTOOLS.FTP.FTPTools.CurrentDirectory">
+            <summary>
+            获取FTP服务器上的当前路径
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.FTP.FTPTools.CheckFileExist(System.String)">
+            <summary>
+            检查文件是否存在
+            </summary>
+            <param name="fileName">要检查的文件名</param>
+            <returns>返回一个值,指示要检查的文件是否存在</returns>
+        </member>
+        <member name="T:MYHGTOOLS.HGEncryptAndDes">
+            <summary>
+            创建人：刘欢
+            创建时间：2014年12月8日 18:15:20
+            说明：无key加密解密
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.IpOperation.GetPublicIP">
+            <summary>
+            获取公网IP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.IpOperation.GetInternetIp">
+            <summary>
+            获取公网ip地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.IpOperation.GetSingelIP">
+            <summary>
+            获得当前页面客户端的IP
+            </summary>
+            <returns>当前页面客户端的IP</returns>
+        </member>
+        <member name="M:MYHGTOOLS.IpOperation.GetPubLicCity(System.String)">
+            <summary>
+            通过ip获取城市
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.IpOperation.GetStrByUrl(System.String,System.Text.Encoding)">
+             <summary>
+            通过URL下载网页HTML,返回HTML代码
+             </summary>
+             <param name="url">要下载的网页的网址</param>
+             <param name="encoding">要下载的网页的编码</param>
+             <returns>网页内容</returns>
+        </member>
+        <member name="M:MYHGTOOLS.IpOperation.GetBrowerVersion">
+            <summary>
+            获取浏览器版本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.JsonToModel`1.modelToJson(`0)">
+            <summary>
+            将实体转换为json
+            </summary>
+            <param name="Model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.jsonTools.FileItem">
+            <summary>
+            文件元数据。
+            可以使用以下几种构造方法：
+            本地路径：new FileItem("C:/temp.jpg");
+            本地文件：new FileItem(new FileInfo("C:/temp.jpg"));
+            字节流：new FileItem("abc.jpg", bytes);
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.FileItem.#ctor(System.IO.FileInfo)">
+            <summary>
+            基于本地文件的构造器。
+            </summary>
+            <param name="fileInfo">本地文件</param>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.FileItem.#ctor(System.String)">
+            <summary>
+            基于本地文件全路径的构造器。
+            </summary>
+            <param name="filePath">本地文件全路径</param>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.FileItem.#ctor(System.String,System.Byte[])">
+            <summary>
+            基于文件名和字节流的构造器。
+            </summary>
+            <param name="fileName">文件名称（服务端持久化字节流到磁盘时的文件名）</param>
+            <param name="content">文件字节流</param>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.FileItem.#ctor(System.String,System.Byte[],System.String)">
+            <summary>
+            基于文件名、字节流和媒体类型的构造器。
+            </summary>
+            <param name="fileName">文件名（服务端持久化字节流到磁盘时的文件名）</param>
+            <param name="content">文件字节流</param>
+            <param name="mimeType">媒体类型</param>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.FileItem.GetFileSuffix(System.Byte[])">
+            <summary>
+            获取文件的真实后缀名。目前只支持JPG, GIF, PNG, BMP四种图片文件。
+            </summary>
+            <param name="fileData">文件字节流</param>
+            <returns>JPG, GIF, PNG or null</returns>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.FileItem.GetMimeType(System.Byte[])">
+            <summary>
+            获取文件的真实媒体类型。目前只支持JPG, GIF, PNG, BMP四种图片文件。
+            </summary>
+            <param name="fileData">文件字节流</param>
+            <returns>媒体类型</returns>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.FileItem.GetMimeType(System.String)">
+            <summary>
+            根据文件后缀名获取文件的媒体类型。
+            </summary>
+            <param name="fileName">带后缀的文件名或文件全名</param>
+            <returns>媒体类型</returns>
+        </member>
+        <member name="T:MYHGTOOLS.jsonTools.Tools">
+            <summary>
+            辅助工具类
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.Tools.GetJosnValue(System.String,System.String)">
+            <summary>
+            获取Json string某节点的值。
+            </summary>
+            <param name="json"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.Tools.ConvertDateTimeInt(System.DateTime)">
+            <summary>
+            datetime转换成unixtime
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.Tools.ConvertIntDateTime(System.Double)">
+            <summary>
+            将Unix时间戳转换为DateTime类型时间
+            </summary>
+            <param name="d"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.jsonTools.WebUtils">
+            <summary>
+            网络工具类。
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.jsonTools.WebUtils.Timeout">
+            <summary>
+            请求与响应的超时时间
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.WebUtils.DoPost(System.String,System.String)">
+            <summary>
+            执行HTTP POST请求。
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="postData">post数据</param>
+            <returns>HTTP响应</returns>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.WebUtils.DoPost(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            执行HTTP POST请求。
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="parameters">请求参数</param>
+            <returns>HTTP响应</returns>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.WebUtils.DoGet(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            执行HTTP GET请求。
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="parameters">请求参数</param>
+            <returns>HTTP响应</returns>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.WebUtils.DoPost(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,MYHGTOOLS.jsonTools.FileItem})">
+            <summary>
+            执行带文件上传的HTTP POST请求。
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="textParams">请求文本参数</param>
+            <param name="fileParams">请求文件参数</param>
+            <returns>HTTP响应</returns>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.WebUtils.GetResponseAsString(System.Net.HttpWebResponse,System.Text.Encoding)">
+            <summary>
+            把响应流转换为文本。
+            </summary>
+            <param name="rsp">响应流对象</param>
+            <param name="encoding">编码方式</param>
+            <returns>响应文本</returns>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.WebUtils.BuildGetUrl(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            组装GET请求URL。
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="parameters">请求参数</param>
+            <returns>带参数的GET请求URL</returns>
+        </member>
+        <member name="M:MYHGTOOLS.jsonTools.WebUtils.BuildQuery(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            组装普通文本请求参数。
+            </summary>
+            <param name="parameters">Key-Value形式请求参数字典</param>
+            <returns>URL编码后的请求数据</returns>
+        </member>
+        <member name="T:MYHGTOOLS.Login.BaseLogin">
+            <summary>
+            创建人：刘欢
+            创建时间：2015年1月18日 18:15:31
+            说明：BaseLogin
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.Login.BaseLogin._User">
+            <summary>
+            定义私有变量用户结构
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.Login.BaseLogin.User">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.Login.CookieHandler.setCookie(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Cookies赋值
+            </summary>
+            <param name="strName">主键</param>
+            <param name="strValue">键值</param>
+            <param name="strDay">有效天数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.CookieHandler.setCookie(System.String,System.String,System.Int32)">
+            <summary>
+            Cookies赋值
+            </summary>
+            <param name="strName">主键</param>
+            <param name="strValue">键值</param>
+            <param name="strDay">有效天数</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.CookieHandler.getCookie(System.String,System.String)">
+            <summary>
+            读取Cookies
+            </summary>
+            <param name="strName">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.CookieHandler.getCookie(System.String)">
+            <summary>
+            读取Cookies
+            </summary>
+            <param name="strName">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.CookieHandler.remCookie(System.String,System.String)">
+            <summary>
+            删除Cookies
+            </summary>
+            <param name="strName">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.CookieHandler.remCookie(System.String)">
+            <summary>
+            删除Cookies
+            </summary>
+            <param name="strName">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.CookieHandler.setCookies(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Int32,System.String)">
+            <summary>
+            同时绑定多个cookie
+            </summary>
+            <param name="strName">cookie文件的名称</param>
+            <param name="lsKey">键</param>
+            <param name="lsValue">值</param>
+            <param name="strDay">过去天数</param>
+            <param name="strDomain">cookie域</param>
+            <returns>保存成功返回 ture</returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.CookieHandler.getCookies(System.String,System.String)">
+            <summary>
+            获取多组键值对
+            </summary>
+            <param name="strName">cookie名称</param>
+            <param name="strDomain">域名</param>
+            <returns>获取多组键值对</returns>
+        </member>
+        <member name="T:MYHGTOOLS.Login.SafeHandler">
+            <summary>
+            加密类
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.Login.SafeHandler.#ctor">
+            <summary>    
+            对称加密类的构造函数    
+            </summary>    
+        </member>
+        <member name="M:MYHGTOOLS.Login.SafeHandler.GetLegalKey">
+            <summary>    
+            获得密钥    
+            </summary>    
+            <returns>密钥</returns>    
+        </member>
+        <member name="M:MYHGTOOLS.Login.SafeHandler.GetLegalIV">
+            <summary>    
+            获得初始向量IV    
+            </summary>    
+            <returns>初试向量IV</returns>    
+        </member>
+        <member name="M:MYHGTOOLS.Login.SafeHandler.Encrypto(System.String)">
+            <summary>    
+            加密方法    
+            </summary>    
+            <param name="Source">待加密的串</param>    
+            <returns>经过加密的串</returns>    
+        </member>
+        <member name="M:MYHGTOOLS.Login.SafeHandler.Decrypto(System.String)">
+            <summary>    
+            解密方法    
+            </summary>    
+            <param name="Source">待解密的串</param>    
+            <returns>经过解密的串</returns>    
+        </member>
+        <member name="M:MYHGTOOLS.Login.SessionHandler.setSession(System.String,System.Object,System.Int32)">
+            <summary>
+            添加session缓存
+            </summary>
+            <param name="strKey">键</param>
+            <param name="objValue">值</param>
+            <param name="strTimeout">超时</param>
+            <returns>成功返回true</returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.SessionHandler.getSession(System.String)">
+            <summary>
+            获取Session的值
+            </summary>
+            <param name="strKey">键</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.SessionHandler.remSession(System.String)">
+            <summary>
+            删除Session
+            </summary>
+            <param name="strKey">键</param>
+            <returns>成功返回 true</returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.SessionHandler.setSessions(System.Collections.Generic.Dictionary{System.String,System.Object},System.Int32)">
+            <summary>
+            添加多条
+            </summary>
+            <param name="dic">字典</param>
+            <param name="strTimeout">超时</param>
+            <returns>成功返回true</returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.SessionHandler.getSessions(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取session值
+            </summary>
+            <param name="strKeys">键组</param>
+            <returns>返回字典</returns>
+        </member>
+        <member name="M:MYHGTOOLS.Login.SessionHandler.remSessions(System.Collections.Generic.List{System.String})">
+            <summary>
+            删除Session
+            </summary>
+        </member>
+        <member name="T:MYHGTOOLS.Login.UserSet">
+            <summary>
+            创建人：刘欢
+            创建时间：2015年1月18日 17:50:53
+            说明：登录类
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.Login.UserSet._User">
+            <summary>
+            定义私有变量
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.Login.UserSet.Days">
+            <summary>
+            cookie保存时间
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.Login.UserSet.sUser">
+            <summary>
+            给用户赋值
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.Login.UserSet.LoginOut">
+            <summary>
+            退出的方法
+            </summary>
+        </member>
+        <member name="T:MYHGTOOLS.LogMessage">
+            <summary>
+            关于本地文件的操作
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.LogMessage.saveTicketDataSW(System.Text.StringBuilder,System.String,System.Int32,System.Exception@)">
+            <summary>
+            写入本地文件StreamWriter
+            </summary>
+            <param name="message">记录信息</param>
+            <param name="address">存放地址(需要后缀)</param>
+            <param name="type">if == 0 address为基路径 if == 1 为全部路径</param>
+            <param name="exMess">返回的错误信息，ok为成功</param>
+        </member>
+        <member name="M:MYHGTOOLS.LogMessage.readUserSR(System.String,System.Exception@)">
+            <summary>
+            读取用户的方法 StreamReader
+            </summary>
+            <param name="LoginPath">读取路径</param>
+            <param name="exMess">返回错误信息，ok为成功</param>
+            <returns>返回读取到的内容</returns>
+        </member>
+        <member name="M:MYHGTOOLS.LogMessage.saveTicketDataBW(System.Text.StringBuilder,System.String,System.Int32,System.Exception@)">
+            <summary>
+            写入本地文件BinaryWriter
+            </summary>
+            <param name="message">记录信息</param>
+            <param name="address">存放地址(需要后缀)</param>
+            <param name="type">if == 0 address为基路径 if == 1 为全部路径</param>
+            <param name="exMess">返回的错误信息，ok为成功</param>
+        </member>
+        <member name="M:MYHGTOOLS.LogMessage.readUserBR(System.String,System.Exception@)">
+            <summary>
+            读取用户的方法 BinaryReader
+            </summary>
+            <param name="LoginPath">读取路径</param>
+            <param name="exMess">返回错误信息，ok为成功</param>
+            <returns>返回读取到的内容</returns>
+        </member>
+        <member name="T:MYHGTOOLS.models.sParams">
+            <summary>
+            参数结构传输形式
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.models.sParams._ParamName">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.models.sParams.ParamName">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.models.sParams._ParamType">
+            <summary>
+            参数类型
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.models.sParams.ParamType">
+            <summary>
+            参数类型
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.models.sParams._ParamSize">
+            <summary>
+            参数大小
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.models.sParams.ParamSize">
+            <summary>
+            参数大小
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.models.sParams._ParamValue">
+            <summary>
+            参数的数值
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.models.sParams.ParamValue">
+            <summary>
+            参数数值
+            </summary>
+        </member>
+        <member name="T:MYHGTOOLS.ORACLEProtectOperation`1">
+            <summary>
+            创建人：刘欢
+            创建时间：2015年1月8日 22:31:35
+            说明：增删改从Oracle
+            注意：必须配置connStringOracle
+            配置方法：http://www.cnblogs.com/myblogslh/p/4212105.html
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.ProtectIsShow(System.String,System.Text.StringBuilder@)">
+            <summary>
+            判断是否存在sql关键字
+            </summary>
+            <param name="str">参数</param>
+            <returns>返回数据</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.ReturnInsert(`0)">
+            <summary>
+            insert
+            </summary>
+            <param name="Model">添加实体</param>
+            <returns>返回成功ID失败则返回0</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.ReturnUpdateIsOK(`0,System.String)">
+            <summary>
+            update
+            </summary>
+            <param name="Model">修改实体</param>
+            <param name="where">条件</param>
+            <returns>成功为1失败为0</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.ReturnDeleteIsOK(`0,System.String)">
+            <summary>
+            Delete   
+            </summary>
+            <param name="Model">删除实体</param>
+            <param name="Model">where</param>
+            <returns>1为成功0为失败</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.ReturnDeleteIsOK(`0)">
+            <summary>
+            Delete   
+            </summary>
+            <param name="Model">删除实体</param>
+            <returns>1为成功0为失败</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.GetListByPage(System.Int32,System.Int32,System.String,System.String)">
+            <summary> 
+            根据页数分页 
+            </summary> 
+            <param name="page"></param> 
+            <param name="pagesize"></param> 
+            <param name="where"></param> 
+            <param name="column"></param> 
+            <returns></returns> 
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.GetList(System.String,System.String)">
+            <summary> 
+             获得数据列表 
+            </summary> 
+            <param name="strWhere"></param> 
+            <param name="column"></param> 
+            <returns></returns> 
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.ValueFieldsAndParam(`0,System.String)">
+            <summary>
+            获取添加字段和添加参数
+            </summary>
+            <param name="Model"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.GetParas(System.Object)">
+            <summary>
+            实体转换成参数数组
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.CreateWhere(`0,System.Int32@,System.Int32@)">
+            <summary>
+            生成条件
+            </summary>
+            <param name="sb">条件字符串</param>
+            <param name="Info">属性</param>
+            <param name="PageIndex">索引页面</param>
+            <param name="PageSzie">页面大小</param>
+            <returns>返回</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.CreateGroupWhere(`0,System.String,System.Int32@,System.Int32@)">
+            <summary>
+            生成分组条件
+            </summary>
+            <param name="Model">实体</param>
+            <param name="GroupField">分组字段</param>
+            <param name="PageIndex">索引页面</param>
+            <param name="PageSzie">页面大小</param>
+            <returns>返回</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.IsBase(System.Type,System.Reflection.PropertyInfo)">
+            <summary>
+            是否属于基类
+            </summary>
+            <param name="Infos">公共属性集</param>
+            <param name="info">单个公共属性</param>
+            <returns>在基类里面返回true否则返回false</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.CreateFields(`0,System.Int32)">
+            <summary>
+            返回字段
+            </summary>
+            <param name="Model">实体</param>
+            <returns>返回字段</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.Select(`0,System.Int32)">
+            <summary>
+            查询数据表
+            </summary>
+            <param name="Model">Model实体</param>
+            <param name="Where">条件</param>
+            <returns>返回 删除的字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.Select(`0,System.String,System.Int32)">
+            <summary>
+            查询数据表
+            </summary>
+            <param name="Model">Model实体</param>
+            <param name="Where">条件</param>
+            <returns>返回 删除的字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.SelectByPage(`0,System.String,System.String,System.Int32)">
+            <summary>
+            查询数据By分页
+            </summary>
+            <param name="Model">Model实体</param>
+            <returns>返回字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.SelectByPage(`0)">
+            <summary>
+            总页数
+            </summary>
+            <param name="Model"></param>
+            <returns>返回总页数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.SelectByPage(`0,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            查询数据By分页
+            </summary>
+            <param name="Model">Model实体</param>
+            <returns>返回字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.SelectByPage(`0,System.String)">
+            <summary>
+            总页数
+            </summary>
+            <param name="Model"></param>
+            <returns>返回总页数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.SelectByGPage(`0,System.String,System.String,System.String)">
+            <summary>
+            查询数据By分页分组页面
+            </summary>
+            <param name="Model">实体</param>
+            <param name="GroupField">分组</param>
+            <param name="SortField">排序字段</param>
+            <param name="Sort">排序</param>
+            <returns>分组分页</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.SelectByGPage(`0,System.String)">
+            <summary>
+            总页数
+            </summary>
+            <param name="Model"></param>
+            <returns>返回总页数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.ValueFieldsAndParam(`0)">
+            <summary>
+            生成添加字段和数据参数
+            </summary>
+            <returns>返回字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.Insert(`0)">
+            <summary>
+            生成添加字符串
+            </summary>
+            <param name="Model">实体</param>
+            <returns>返回添加的字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.UpDateSql(`0)">
+            <summary>
+            返回更新的sql语句
+            </summary>
+            <param name="Model">实体</param>
+            <returns>添加</returns>
+        </member>
+        <member name="M:MYHGTOOLS.ORACLEProtectOperation`1.Update(`0,System.String)">
+            <summary>
+            更新sql语句
+            </summary>
+            <param name="Model">实体</param>
+            <param name="Where">条件</param>
+            <returns>返回sql语句</returns>
+        </member>
+        <member name="T:MYHGTOOLS.returnTopJson">
+            <summary>
+            返回json
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.returnTopJson.returnJson(System.String,System.String,System.String)">
+            <summary>
+            返回code:"",data:,message:""
+            </summary>
+            <param name="code">code</param>
+            <param name="data">要求格式[{"":""}]</param>
+            <param name="message">message</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.returnTopJson.returnJson(System.Int32,System.String,System.String)">
+            <summary>
+            返回{"Stat":int,"Msg":msg,"Data":[]}
+            </summary>
+            <param name="stat"></param>
+            <param name="msg"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.returnTopJson.returnJson(System.String,System.String)">
+            <summary>
+            返回"A":"B"
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.SafetyOperations">
+            <summary>
+            创建人：刘欢
+            创建日期：2014-10-13
+            说明：安全类
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.SafetyOperations.Decrypt(System.String)">
+            <summary>
+            解密方法
+            </summary>
+            <param name="toDecrypt">解密字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.SafetyOperations.Encrypt(System.String)">
+            <summary>
+            加密方法
+            </summary>
+            <param name="toEncrypt">加密字符</param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.SQLProtectOperation`1">
+            <summary>
+            创建人：刘欢
+            创建日期：2014-10-14
+            说明：关于sql的一些操作
+            注意：必须配置ConnectionString连接字符串
+            配置方法：http://blog.sina.com.cn/s/blog_ae56255d0102v8xy.html
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.Protect(System.String)">
+            <summary>
+            判断是否存在sql关键字
+            </summary>
+            <param name="str">参数</param>
+            <returns>返回数据</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.ProtectIsShow(System.String,System.Text.StringBuilder@)">
+            <summary>
+            判断是否存在sql关键字
+            </summary>
+            <param name="str">参数</param>
+            <returns>返回数据</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.ReturnInsert(`0)">
+            <summary>
+            insert
+            </summary>
+            <param name="Model">添加实体</param>
+            <returns>返回成功ID失败则返回0</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.ReturnUpdateIsOK(`0,System.String)">
+            <summary>
+            update
+            </summary>
+            <param name="Model">修改实体</param>
+            <param name="where">条件</param>
+            <returns>成功为1失败为0</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.ReturnDeleteIsOK(`0,System.String)">
+            <summary>
+            Delete   
+            </summary>
+            <param name="Model">删除实体</param>
+            <param name="Model">where</param>
+            <returns>1为成功0为失败</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.ReturnDeleteIsOK(`0)">
+            <summary>
+            Delete   
+            </summary>
+            <param name="Model">删除实体</param>
+            <returns>1为成功0为失败</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.ReturnTable(`0,System.String,System.Text.StringBuilder@)">
+            <summary>
+            返回datatable
+            </summary>
+            <param name="Model">查询model</param>
+            <param name="where">whree</param>
+            <param name="sbu">返回结果</param>
+            <returns>成功out sbu=ok失败out sbu=错误信息</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.ValueFieldsAndParam(`0,System.String)">
+            <summary>
+            获取添加字段和添加参数
+            </summary>
+            <param name="Model"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.GetParas(System.Object)">
+            <summary>
+            实体转换成参数数组
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.CommPageToSql(System.String,System.Int32,System.Int32,System.Int32@,System.Text.StringBuilder@)">
+            <summary>
+            公共分页方法(sql)
+            注意：此方法必须具备PRO_Pub_FenYe存储过程
+            下载地址：http://pan.baidu.com/s/1kTsVLyR
+            密码：lnmg
+            </summary>
+            <param name="sql">sql</param>
+            <param name="pageIndex">当前页面</param>
+            <param name="pageSize">页面大小</param>
+            <param name="recordCount">总行数</param>
+            <param name="sbu">输出返回状态</param>
+            <returns>成功sbu=ok失败sbu=错误信息</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.CommPageToEntity(`0,System.String,System.String,System.Int32,System.Int32,System.Int32@,System.Text.StringBuilder@)">
+            <summary>
+            公共分页方法(entity)
+            </summary>
+            <param name="Model">实体</param>
+            <param name="where">where</param>
+            <param name="orderwhere">排序ID(id desc)</param>
+            <param name="pageIndex">当前页</param>
+            <param name="PageSize">页面大小</param>
+            <param name="recoreCount">总行数</param>
+            <param name="sbu">输出返回状态</param>
+            <returns>成功sbu=ok失败sbu=错误信息</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.GetListByPage(System.Int32,System.Int32,System.String,System.String)">
+            <summary> 
+            根据页数分页 
+            </summary> 
+            <param name="page"></param> 
+            <param name="pagesize"></param> 
+            <param name="where"></param> 
+            <param name="column"></param> 
+            <returns></returns> 
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.CreateWhere(`0,System.Int32@,System.Int32@)">
+            <summary>
+            生成条件
+            </summary>
+            <param name="sb">条件字符串</param>
+            <param name="Info">属性</param>
+            <param name="PageIndex">索引页面</param>
+            <param name="PageSzie">页面大小</param>
+            <returns>返回</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.CreateGroupWhere(`0,System.String,System.Int32@,System.Int32@)">
+            <summary>
+            生成分组条件
+            </summary>
+            <param name="Model">实体</param>
+            <param name="GroupField">分组字段</param>
+            <param name="PageIndex">索引页面</param>
+            <param name="PageSzie">页面大小</param>
+            <returns>返回</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.IsBase(System.Type,System.Reflection.PropertyInfo)">
+            <summary>
+            是否属于基类
+            </summary>
+            <param name="Infos">公共属性集</param>
+            <param name="info">单个公共属性</param>
+            <returns>在基类里面返回true否则返回false</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.CreateFields(`0,System.Int32)">
+            <summary>
+            返回字段
+            </summary>
+            <param name="Model">实体</param>
+            <returns>返回字段</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.Select(`0,System.Int32)">
+            <summary>
+            查询数据表
+            </summary>
+            <param name="Model">Model实体</param>
+            <param name="Where">条件</param>
+            <returns>返回 删除的字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.Select(`0,System.String,System.Int32)">
+            <summary>
+            查询数据表
+            </summary>
+            <param name="Model">Model实体</param>
+            <param name="Where">条件</param>
+            <returns>返回 删除的字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.SelectByPage(`0,System.String,System.String,System.Int32)">
+            <summary>
+            查询数据By分页
+            </summary>
+            <param name="Model">Model实体</param>
+            <returns>返回字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.SelectByPage(`0)">
+            <summary>
+            总页数
+            </summary>
+            <param name="Model"></param>
+            <returns>返回总页数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.SelectByPage(`0,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            查询数据By分页
+            </summary>
+            <param name="Model">Model实体</param>
+            <returns>返回字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.SelectByPage(`0,System.String)">
+            <summary>
+            总页数
+            </summary>
+            <param name="Model"></param>
+            <returns>返回总页数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.SelectByGPage(`0,System.String,System.String,System.String)">
+            <summary>
+            查询数据By分页分组页面
+            </summary>
+            <param name="Model">实体</param>
+            <param name="GroupField">分组</param>
+            <param name="SortField">排序字段</param>
+            <param name="Sort">排序</param>
+            <returns>分组分页</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.SelectByGPage(`0,System.String)">
+            <summary>
+            总页数
+            </summary>
+            <param name="Model"></param>
+            <returns>返回总页数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.ValueFieldsAndParam(`0)">
+            <summary>
+            生成添加字段和数据参数
+            </summary>
+            <returns>返回字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.Insert(`0)">
+            <summary>
+            生成添加字符串
+            </summary>
+            <param name="Model">实体</param>
+            <returns>返回添加的字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.UpDateSql(`0)">
+            <summary>
+            返回更新的sql语句
+            </summary>
+            <param name="Model">实体</param>
+            <returns>添加</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.Update(`0,System.String)">
+            <summary>
+            更新sql语句
+            </summary>
+            <param name="Model">实体</param>
+            <param name="Where">条件</param>
+            <returns>返回sql语句</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.ConvertToParameters(`0)">
+            <summary>
+            转化成参数
+            </summary>
+            <param name="Model">参数结构</param>
+            <returns>数据库参数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.ConvertToDbType(System.String)">
+            <summary>
+            C#语言类型与数据库参数类型转换
+            </summary>
+            <param name="propertype">DbType的字符串形式</param>
+            <returns>返回字符串类型</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SQLProtectOperation`1.GetParm(`0)">
+            <summary>
+            赋值SqlParameter（原方法）
+            </summary>
+            <param name="Model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.SqlServerProvider">
+            <summary>
+            SqlServer提供类
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.Dispose">
+            <summary>
+            回收垃圾 
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.SqlServerProvider.ConString">
+            <summary>
+            定义连接字符串键值对
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.SqlServerProvider.con">
+            <summary>
+            定义链接字符串
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.#ctor">
+            <summary>
+            构造函数实例化DBheler类库(不带参数)
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.#ctor(System.String)">
+            <summary>
+            构造函数实例化DBheler类库(带参数)
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.Finalize">
+            <summary>
+            析构函数用于回收资源
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.ExecuteReader``1(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            反射的方法给泛型赋值
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="dr">DataReader</param>
+            <returns>返回泛型</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.Open">
+            <summary>
+            打开方法
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.Close">
+            <summary>
+            关闭方法
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.CreateDataAdapter(System.String,System.Data.SqlClient.SqlParameter[],System.Int32)">
+            <summary>
+            创建SqlDataAdapter
+            </summary>
+            <param name="ProName">存储过程名称或sql语句</param>
+            <param name="Param">参数</param>
+            <param name="Type">类型（1=存储过程0=sql语句）</param>
+            <returns>返回SqlDataAdapter</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.CreateSqlCommand(System.String,System.Data.SqlClient.SqlParameter[],System.Int32)">
+            <summary>
+            定义sqlCommand对象
+            </summary>
+            <param name="ProName">存储过程名称或sql语句</param>
+            <param name="Param">参数</param>
+            <param name="Type">类型（1=存储过程0=sql语句）</param>
+            <returns>返回sqlCommand对象</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.CreateDataReader(System.String,System.Data.SqlClient.SqlParameter[],System.Int32,System.Object@)">
+            <summary>
+            定义DataReader
+            </summary>
+            <param name="ProName">存储过程名称或sql语句</param>
+            <param name="Param">参数</param>
+            <param name="Type">类型（1=存储过程0=sql语句）</param>
+            <returns>返回DataReader</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.ReaderTable(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            DataSet和DataReader转换
+            </summary>
+            <param name="DataReader">读取数据</param>
+            <returns>返回数据集</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.ChangeDataBase(System.String)">
+            <summary>
+            切换数据库名称
+            </summary>
+            <param name="BaseName">数据库名称</param>
+            <returns>成功返回true失败返回false</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.ExecuteNonQuery(System.String,System.Int32,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            受影响行数
+            </summary>
+            <param name="ProName">存储过程名称或sql语句</param>
+            <param name="Param">参数</param>
+            <param name="Type">类型（1=存储过程0=sql语句）</param>
+            <returns>返回受影响行数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.TranExecuteNonQuerys(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Data.SqlClient.SqlParameter[]})">
+            <summary>
+            执行多条sql语句
+            </summary>
+            <param name="strSql">sql语句</param>
+            <returns>受影响行数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.ExecuteScalar(System.String,System.Int32,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            最后第一行第一列的值
+            </summary>
+            <param name="ProName">存储过程名称或sql语句</param>
+            <param name="Param">参数</param>
+            <param name="Type">类型（1=存储过程0=sql语句）</param>
+            <returns>返回最后第一行第一列的值</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.TranExecuteScalar(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Data.SqlClient.SqlParameter[]})">
+            <summary>
+            最后第一行第一列的值
+            </summary>
+            <param name="ProName">存储过程名称或sql语句</param>
+            <param name="Param">参数</param>
+            <param name="Type">类型（1=存储过程0=sql语句）</param>
+            <returns>返回最后第一行第一列的值</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.ReturnDataSetByDataAdapter(System.String,System.String,System.Int32,System.Object@,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            返回DataSet通过DataAdapter
+            </summary>
+            <param name="ProName">存储过程名称或sql语句</param>
+            <param name="Param">参数</param>
+            <param name="tableName">表名</param>
+            <param name="Type">类型（1=存储过程0=sql语句）</param>
+            <param name="retValue">返回值(外部必须赋值,内部不一定赋值)—一般返回查询表的总行数</param>
+            <returns>返回DataSet</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.ReturnDataSetByDataAdapter(System.String,System.Int32,System.Object@,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            返回DataSet通过DataAdapter
+            </summary>
+            <param name="ProName">存储过程名称或sql语句</param>
+            <param name="Param">参数</param>
+            <param name="Type">类型（1=存储过程0=sql语句）</param>
+            <param name="retValue">返回值(外部必须赋值,内部不一定赋值)—一般返回查询表的总行数</param>
+            <returns>返回DataSet</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.ReturnDataSetByDataReader(System.String,System.Int32,System.Object@,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            通过DataReader返回数据集
+            </summary>
+            <param name="ProName">存储过程名称或sql语句</param>
+            <param name="param">参数</param>
+            <param name="obj">返回参数</param>
+            <param name="Type">类型（1=存储过程0=sql语句）</param>
+            <returns>通过DataReader返回数据集</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.PageDataSet(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            分页重载函数，返回当前页
+            </summary>
+            <param name="ProName">存储过程名称或sql语句</param>
+            <param name="Param">参数</param>
+            <param name="TableName">表名</param>
+            <param name="Type">类型（1=存储过程0=sql语句）</param>
+            <param name="CurrentPage">当前页</param>
+            <param name="PageSize">页面大小</param>
+            <returns>分页重载函数，返回当前页</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.ReaderList``1(System.String,System.Data.SqlClient.SqlParameter[],System.Int32,System.Object@)">
+            <summary>
+            执行DataReader
+            </summary>
+            <typeparam name="T">泛型参数</typeparam>
+            <param name="ProName">sql语句或存储过程名称</param>
+            <param name="Param">参数</param>
+            <param name="Type">sql语句还是存储过程</param>
+            <param name="obj">返回参数</param>
+            <returns>List泛型对象</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.ColumnExists(System.String,System.String)">
+            <summary>
+            判断是否存在某表的某个字段
+            </summary>
+            <param name="tableName">表名称</param>
+            <param name="columnName">列名称</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.TabExists(System.String)">
+            <summary>
+            表是否存在
+            </summary>
+            <param name="TableName">表名</param>
+            <returns>是返回true否则返回false</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.GetProcParams(System.String,System.String,System.String)">
+            <summary>
+            返回存储过程参数
+            </summary>
+            <param name="ProcName">sql语句</param>
+            <param name="tableName">表名</param>
+            <param name="Framework">架构</param>
+            <returns>存储过程参数数据集</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.BACKUP(System.String,System.String)">
+            <summary>
+            备份数据库
+            </summary>
+            <param name="DataBaseName">数据库名称</param>
+            <param name="SqlPath">数据库路径</param>
+            <returns>执行结果（true执行成功，false执行失败）</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.RESTORE(System.String,System.String)">
+            <summary>
+            恢复数据库
+            </summary>
+            <param name="DataBaseName">数据库名称</param>
+            <param name="SqlPath">数据库路径</param>
+            <returns>处理结果（true执行成功，false执行失败）</returns>
+        </member>
+        <member name="M:MYHGTOOLS.SqlServerProvider.ReturnDataSetBySerializer(System.String,System.Data.SqlClient.SqlParameter[],System.String,System.Int32,System.Object@)">
+            <summary>
+            返回序列化的DataSet
+            </summary>
+            <param name="proName">存储过程名称或sql语句</param>
+            <param name="Param">参数</param>
+            <param name="tableName">表名</param>
+            <param name="Type">类型（1=存储过程0=sql语句）</param>
+            <returns>返回序列化的DataSet</returns>
+        </member>
+        <member name="T:MYHGTOOLS.sqls.Sql">
+            <summary>
+            公共Sql语句的提供者
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.sqls.Sql.ColumnExists">
+            <summary>
+            数据库中某表是否存在否列
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.sqls.Sql.TableExists">
+            <summary>
+            判断某张表是否存在
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.sqls.Sql.MaxID">
+            <summary>
+            获取某表中最大的ID值
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.sqls.Sql.GetProcParams">
+            <summary>
+             获取存储过程参数
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.sqls.Sql.backup">
+            <summary>
+            备份数据库
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.sqls.Sql.restore">
+            <summary>
+            还原数据库
+            </summary>
+        </member>
+        <member name="T:MYHGTOOLS.StringOperation">
+            <summary>
+            字符串操作
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.DelLastOne(System.String)">
+            <summary>
+            去掉字符串的最后一位
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.ToIntArray(System.String)">
+            <summary>
+            以‘,’分割字符串转成int数组
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.arrayToString(System.String[])">
+            <summary>
+            把数组转化成字符串
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.ToInt(System.String)">
+            <summary>
+            String转Int类型
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.ToDecimal(System.String)">
+            <summary>
+            String转Decimal类型
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.ToDateTime(System.String)">
+            <summary>
+            String转DateTime类型
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.NoHTML(System.String)">
+            <summary>   
+            去除HTML标记   
+            </summary>   
+            <param name="NoHTML">包括HTML的源码</param>   
+            <returns>已经去除后的文字</returns>   
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.HtmlEncode(System.String)">
+            <summary>
+            替换html中的特殊字符
+            </summary>
+            <param name="theString">需要进行替换的文本。</param>
+            <returns>替换完的文本。</returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.HtmlDecode(System.String)">
+            <summary>
+            恢复html中的特殊字符
+            </summary>
+            <param name="theString">需要恢复的文本。</param>
+            <returns>恢复好的文本。</returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.MD5(System.String,System.Int32)">
+            <summary>
+            MD5加密
+            </summary>
+            <param name="value"></param>
+            <param name="code">加密后截取长度16或者32</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.MD5(System.String)">
+            <summary>
+            MD5加密 32位
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.MobileReplaceX(System.String)">
+            <summary>
+            *字符替换
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.EmailReplaceX(System.String)">
+            <summary>
+            *字符替换
+            </summary>
+            <param name="str"></param>
+            <param name="pre"></param>
+            <param name="last"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.ReplaceX(System.String,System.Int32,System.String)">
+            <summary>
+            替换为*
+            </summary>
+            <param name="str"></param>
+            <param name="Pre"></param>
+            <param name="replace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.SetNumber(System.String)">
+            <summary>
+            生成订单号
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.Encrypt(System.String,System.String)">
+            <summary>
+            DEC 加密过程
+            </summary>
+            <param name="pToEncrypt">被加密的字符串</param>
+            <param name="sKey">密钥（只支持8个字节的密钥）</param>
+            <returns>加密后的字符串</returns>
+        </member>
+        <member name="M:MYHGTOOLS.StringOperation.Decrypt(System.String,System.String)">
+            <summary>
+            DEC 解密过程
+            </summary>
+            <param name="pToDecrypt">被解密的字符串</param>
+            <param name="sKey">密钥（只支持8个字节的密钥，同前面的加密密钥相同）</param>
+            <returns>返回被解密的字符串</returns>
+        </member>
+        <member name="T:MYHGTOOLS.StrOperation">
+            <summary>
+            创建者：刘欢
+            创建日期：2014年10月14日 16:15:18
+            说明：关于字符串的一些操作
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.StrOperation.GetFirstString(System.String,System.Int32)">
+            <summary>
+            截取字符串优化版
+            </summary>
+            <param name="stringToSub">所要截取的字符</param>
+            <param name="length">长度</param>
+            <returns>截取后的字符</returns>
+        </member>
+        <member name="M:MYHGTOOLS.StrOperation.GenerateCheckCode">
+            <summary>
+            生成随机数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StrOperation.CreateCheckCodeImage">
+            <summary>
+            生成验证码图片
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.StrOperation.GenerateRandom(System.Int32)">
+            <summary>
+            生成随机数
+            </summary>
+            <param name="Length">长度</param>
+            <returns>随机数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.StrOperation.getSpells(System.String)">
+            <summary>
+            获取汉字第一个拼音
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StrOperation.GetBanJiao(System.String)">
+            <summary>
+            全角转半角
+            </summary>
+            <param name="QJstr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StrOperation.ConvertSql(System.String)">
+            <summary>
+            对传递的参数字符串进行处理，防止注入式攻击
+            </summary>
+            <param name="str">传递的参数字符串</param>
+            <returns>String</returns>
+        </member>
+        <member name="M:MYHGTOOLS.StrOperation.ConvertSpellFirst(System.String)">
+            <summary>
+            将指定字符串中的汉字转换为拼音首字母的缩写，其中非汉字保留为原字符
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.StrOperation.GetPassTime(System.DateTime)">
+            <summary>
+            获取指定时间和现在的间隔时间
+            </summary>
+            <param name="postTime"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.XmlControl">
+            <summary>
+            (外部资源，未经测试)
+            </summary>
+        </member>
+        <member name="T:MYHGTOOLS.XmlControl.XmlType">
+            <summary>
+            XML资源类型
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.AddNode(System.String,System.String,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="filePath"></param>
+            <param name="nodeName"></param>
+            <param name="NodeAttr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.GetDataSet(System.String,MYHGTOOLS.XmlControl.XmlType)">
+            <summary>
+            读取XML资源到DataSet中
+            </summary>
+            <param name="source">XML资源，文件为路径，否则为XML字符串</param>
+            <param name="xmlType">XML资源类型</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.get_XmlValue_ds(System.String,System.Data.DataSet@)">
+            <remarks>
+            赵洪
+            </remarks>
+             <summary>
+             获取一个字符串xml文档中的ds
+             </summary>
+             <param name="xml_string">含有xml信息的字符串</param>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.GetTable(System.String,MYHGTOOLS.XmlControl.XmlType)">
+            <summary>
+            读取XML资源到DataTable中
+            </summary>
+            <param name="source">XML资源，文件为路径，否则为XML字符串</param>
+            <param name="xmlType">XML资源类型：文件，字符串</param>
+            <param name="tableName">表名称</param>
+            <returns>DataTable</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.GetTableCell(System.String,MYHGTOOLS.XmlControl.XmlType,System.Int32,System.String)">
+            <summary>
+            读取XML资源中指定的DataTable的指定行指定列的值
+            </summary>
+            <param name="source">XML资源</param>
+            <param name="xmlType">XML资源类型：文件，字符串</param>
+            <param name="rowIndex">行号</param>
+            <param name="colName">列名</param>
+            <returns>值，不存在时返回Null</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.GetTableCell(System.String,MYHGTOOLS.XmlControl.XmlType,System.Int32,System.Int32)">
+            <summary>
+            读取XML资源中指定的DataTable的指定行指定列的值
+            </summary>
+            <param name="source">XML资源</param>
+            <param name="xmlType">XML资源类型：文件，字符串</param>
+            <param name="rowIndex">行号</param>
+            <param name="colIndex">列号</param>
+            <returns>值，不存在时返回Null</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.get_XmlValue(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            获取一个字符串xml文档中的一个table，指定行，指定列的值
+            </summary>
+            <param name="xml_string">含有xml信息的字符串</param>
+            <param name="tablename">表名</param>
+            <param name="row_index">指定行</param>
+            <param name="col_name">指定列名</param>
+            <returns>相应节点的值</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.get_XmlValue(System.String,System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            获取一个xml文件中的一个table，指定行，指定列的值
+            </summary>
+            <param name="xml_string">含有xml信息的字符串</param>
+            <param name="tablename">表名</param>
+            <param name="row_index">指定行</param>
+            <param name="col_name">指定列名</param>
+            <returns>相应节点的值</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.get_XmlValue_dt(System.String,System.Data.DataTable@,System.String)">
+            <remarks>
+            
+            </remarks>
+             <summary>
+             获取一个字符串xml文档中的dt
+             </summary>
+             <param name="xml_string">含有xml信息的字符串</param>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.SaveTableToFile(System.Data.DataTable,System.String)">
+            <summary>
+            将DataTable写入XML文件中
+            </summary>
+            <param name="dt">含有数据的DataTable</param>
+            <param name="filePath">文件路径</param>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.SaveTableToFile(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            将DataTable以指定的根结点名称写入文件
+            </summary>
+            <param name="dt">含有数据的DataTable</param>
+            <param name="rootName">根结点名称</param>
+            <param name="filePath">文件路径</param>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.UpdateTableCell(System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            使用DataSet方式更新XML文件节点
+            </summary>
+            <param name="filePath">XML文件路径</param>
+            <param name="tableName">表名称</param>
+            <param name="rowIndex">行号</param>
+            <param name="colName">列名</param>
+            <param name="content">更新值</param>
+            <returns>更新是否成功</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.UpdateTableCell(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            使用DataSet方式更新XML文件节点
+            </summary>
+            <param name="filePath">XML文件路径</param>
+            <param name="tableName">表名称</param>
+            <param name="rowIndex">行号</param>
+            <param name="colIndex">列号</param>
+            <param name="content">更新值</param>
+            <returns>更新是否成功</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.GetNodeValue(System.String,MYHGTOOLS.XmlControl.XmlType,System.String)">
+            <summary>
+            读取XML资源中的指定节点内容
+            </summary>
+            <param name="source">XML资源</param>
+            <param name="xmlType">XML资源类型：文件，字符串</param>
+            <param name="nodeName">节点名称</param>
+            <returns>节点内容</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.GetNodeValue(System.String,System.String)">
+            <summary>
+            读取XML资源中的指定节点内容
+            </summary>
+            <param name="source">XML资源</param>
+            <param name="nodeName">节点名称</param>
+            <returns>节点内容</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.UpdateNode(System.String,System.String,System.String)">
+            <summary>
+            更新XML文件中的指定节点内容
+            </summary>
+            <param name="filePath">文件路径</param>
+            <param name="nodeName">节点名称</param>
+            <param name="nodeValue">更新内容</param>
+            <returns>更新是否成功</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.GetNodeInfoByNodeName(System.String,System.String)">
+            <summary>
+            获得xml文件中指定节点的节点数据
+            </summary>
+            <param name="TableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.GetTableByXml(System.String,System.String,System.Boolean)">
+            <summary>
+            根据xml路径获取DataSet。如果Table名为空：flag=false 返回所有xml的数据；flag=true 将xml中的table名作为数据项返回。否则根据table名获取相应的table信息返回。
+            </summary>
+            <param name="XmlPath">xml文件路径</param>
+            <param name="TableName">所要获取的Table名，可为空</param>
+            <param name="flag">若为true，则只将所有表名作为数据项返回；若为false，则返回所要获取的Table的所有数据</param>
+            <returns>返回所获取的DataSet</returns>
+            <summary>
+            根据xml路径获取DataSet。如果Table名为空：flag=false 返回所有xml的数据；flag=true 将xml中的table名作为数据项返回。否则根据table名获取相应的table信息返回。
+            </summary>
+            <param name="XmlPath">xml文件路径</param>
+            <param name="TableName">所要获取的Table名，可为空</param>
+            <param name="flag">若为true，则只将所有表名作为数据项返回；若为false，则返回所要获取的Table的所有数据</param>
+            <returns>返回所获取的DataSet</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.Replaceinvalid(System.String)">
+            <summary>
+            escape invalid Unicode in XML
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.GetInterfaceErrorString(System.String)">
+            <summary>
+            获得接口错误信息
+            </summary>
+            <param name="errCode">错误编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlControl.GetWebSet(System.String)">
+            <summary>
+            返回WebConfig指定节点的值
+            </summary>
+            <param name="NodeName">节点名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:MYHGTOOLS.XmlHandler">
+            <summary>
+            XML操作
+            (外部资源，未经测试)
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.XmlHandler._Name">
+            <summary>
+            xml名字
+            </summary>
+        </member>
+        <member name="P:MYHGTOOLS.XmlHandler.Name">
+            <summary>
+            xml名字
+            </summary>
+        </member>
+        <member name="F:MYHGTOOLS.XmlHandler.XmlDoc">
+            <summary>
+            引用Xml类
+            </summary>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.CreateXml">
+             <summary>
+             创建XML
+             </summary>
+            
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.AddItem(System.String,System.String[],System.String,System.String)">
+            <summary>
+            插入节点
+            </summary>
+            <param name="NodeName">节点名称</param>
+            <param name="NodeAttr">节点属{"id:12","name:suchao"}</param>
+            <param name="NodeDesc">节点描述</param>
+            <param name="NodeValue">节点的值</param>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.ReadText(System.String)">
+            <summary>
+            读取节点的值
+            </summary>
+            <returns>返回值得集合</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.Update(System.String,System.String)">
+            <summary>
+            更新节点
+            </summary>
+            <param name="id">要更新的节点ID</param>
+            <param name="Value">要更新的值</param>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.DelNode(System.String)">
+            <summary>
+            删除节点
+            </summary>
+            <param name="id">要删除的节点的Id</param>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.NodeCount">
+            <summary>
+            计算数据的条数
+            </summary>
+            <returns>返回数据条数</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.ReturnTable">
+            <summary>
+            计算机返回数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.GetAllData">
+            <summary>
+            获取所有的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.GetWhereData(System.String,System.String)">
+            <summary>
+            获取需要的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.GetRecursionData(System.String,System.String,System.String)">
+            <summary>
+            返回递归数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.DelNodes(System.String)">
+            <summary>
+            删除节点
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.UpdateNode(System.String,System.String,System.String,System.String[])">
+            <summary>
+            更新XML文件中的指定节点内容
+            </summary>
+            <param name="filePath">文件路径</param>
+            <param name="nodeName">节点名称</param>
+            <param name="nodeValue">更新内容</param>
+            <returns>更新是否成功</returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.AddNode(System.String,System.String,System.String[],System.String)">
+            <summary>
+            
+            </summary>
+            <param name="filePath"></param>
+            <param name="nodeName"></param>
+            <param name="NodeAttr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MYHGTOOLS.XmlHandler.GetAllDataByWhere">
+            <summary>
+            获取所有的数据
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

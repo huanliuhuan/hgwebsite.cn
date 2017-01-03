@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using Warehouse.Bll;
 using System.Windows.Forms;
-using AdvancedDataGridView;
 
 namespace WarehouseSystem.ShoopingFrom
 {

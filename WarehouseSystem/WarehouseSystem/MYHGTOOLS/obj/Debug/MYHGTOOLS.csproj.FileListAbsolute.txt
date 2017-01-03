@@ -1,0 +1,44 @@
+C:\Users\LIU\documents\visual studio 2010\Projects\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.dll
+C:\Users\LIU\documents\visual studio 2010\Projects\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.pdb
+C:\Users\LIU\documents\visual studio 2010\Projects\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.dll
+C:\Users\LIU\documents\visual studio 2010\Projects\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.pdb
+C:\Users\欢\Desktop\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.xml
+C:\Users\欢\Desktop\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.dll
+C:\Users\欢\Desktop\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.pdb
+C:\Users\欢\Desktop\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.dll
+C:\Users\欢\Desktop\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.pdb
+E:\桌面存放文件\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.pdb
+E:\桌面存放文件\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.xml
+E:\桌面存放文件\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.dll
+E:\桌面存放文件\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.pdb
+E:\桌面存放文件\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.dll
+E:\桌面存放文件\MYHGTOOLS\MYHGTOOLS\bin\Debug\zlib.net.dll
+E:\桌面存放文件\MYHGTOOLS\MYHGTOOLS\bin\Debug\zlibnet.dll
+E:\桌面存放文件\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.csprojResolveAssemblyReference.cache
+E:\桌面存放文件\MYHGTOOLS\MYHGTOOLS\bin\Debug\Newtonsoft.Json.dll
+F:\我的项目\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.xml
+F:\我的项目\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.dll
+F:\我的项目\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.pdb
+F:\我的项目\MYHGTOOLS\MYHGTOOLS\bin\Debug\Newtonsoft.Json.dll
+F:\我的项目\MYHGTOOLS\MYHGTOOLS\bin\Debug\zlib.net.dll
+F:\我的项目\MYHGTOOLS\MYHGTOOLS\bin\Debug\zlibnet.dll
+F:\我的项目\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.csprojResolveAssemblyReference.cache
+F:\我的项目\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.dll
+F:\我的项目\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.pdb
+C:\Users\LHComputer\Documents\MYHGTOOLS2015年1月18日 184029\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.xml
+C:\Users\LHComputer\Documents\MYHGTOOLS2015年1月18日 184029\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.dll
+C:\Users\LHComputer\Documents\MYHGTOOLS2015年1月18日 184029\MYHGTOOLS\MYHGTOOLS\bin\Debug\MYHGTOOLS.pdb
+C:\Users\LHComputer\Documents\MYHGTOOLS2015年1月18日 184029\MYHGTOOLS\MYHGTOOLS\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LHComputer\Documents\MYHGTOOLS2015年1月18日 184029\MYHGTOOLS\MYHGTOOLS\bin\Debug\zlib.net.dll
+C:\Users\LHComputer\Documents\MYHGTOOLS2015年1月18日 184029\MYHGTOOLS\MYHGTOOLS\bin\Debug\zlibnet.dll
+C:\Users\LHComputer\Documents\MYHGTOOLS2015年1月18日 184029\MYHGTOOLS\MYHGTOOLS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\LHComputer\Documents\MYHGTOOLS2015年1月18日 184029\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.dll
+C:\Users\LHComputer\Documents\MYHGTOOLS2015年1月18日 184029\MYHGTOOLS\MYHGTOOLS\obj\Debug\MYHGTOOLS.pdb
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\MYHGTOOLS\bin\Debug\MYHGTOOLS.xml
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\MYHGTOOLS\bin\Debug\MYHGTOOLS.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\MYHGTOOLS\bin\Debug\MYHGTOOLS.pdb
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\MYHGTOOLS\bin\Debug\Newtonsoft.Json.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\MYHGTOOLS\bin\Debug\zlib.net.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\MYHGTOOLS\bin\Debug\zlibnet.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\MYHGTOOLS\obj\Debug\MYHGTOOLS.dll
+D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\MYHGTOOLS\obj\Debug\MYHGTOOLS.pdb

@@ -80,10 +80,11 @@ namespace Warehouse.Dal
         {
             try
             {
-                List<SqlParameter> para = null;
-                string sql = userSql.UpdateToModelSql(testM, where, ref para);
-                int result = sqlWrite.ExecuteNonQuery(sql, para);
-                return result;
+                //List<SqlParameter> para = null;
+                //string sql = userSql.UpdateToModelSql(testM, where, ref para);
+                //int result = sqlWrite.ExecuteNonQuery(sql, para);
+                //return result;
+                return 0;
             }
             catch (Exception ex)
             {

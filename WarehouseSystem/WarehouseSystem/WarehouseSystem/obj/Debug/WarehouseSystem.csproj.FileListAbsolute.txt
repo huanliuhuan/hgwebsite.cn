@@ -1,4 +1,3 @@
-D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\bin\Debug\WarehouseSystem.exe.config
 D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.csprojResolveAssemblyReference.cache
 D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.CustomerFrom.CustomerList.resources
 D:\Work\hgwebsite\WarehouseSystem\WarehouseSystem\WarehouseSystem\obj\Debug\WarehouseSystem.Main.resources

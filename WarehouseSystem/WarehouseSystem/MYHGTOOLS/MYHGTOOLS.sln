@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MYHGTOOLS", "MYHGTOOLS.csproj", "{78E82590-A72C-4050-873F-BFE5F3EC6CCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78E82590-A72C-4050-873F-BFE5F3EC6CCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E82590-A72C-4050-873F-BFE5F3EC6CCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E82590-A72C-4050-873F-BFE5F3EC6CCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E82590-A72C-4050-873F-BFE5F3EC6CCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

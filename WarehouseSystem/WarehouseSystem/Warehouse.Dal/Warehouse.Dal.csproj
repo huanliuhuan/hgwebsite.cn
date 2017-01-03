@@ -37,10 +37,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MYHGTOOLS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\dll\MYHGTOOLS\4.0\MYHGTOOLS.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +51,10 @@
     <Compile Include="TestDAL.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MYHGTOOLS\MYHGTOOLS.csproj">
+      <Project>{78e82590-a72c-4050-873f-bfe5f3ec6ccb}</Project>
+      <Name>MYHGTOOLS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Warehouse.Facroty\Warehouse.Facroty.csproj">
       <Project>{94ef5967-d8ec-42e6-955d-f087494ed656}</Project>
       <Name>Warehouse.Facroty</Name>

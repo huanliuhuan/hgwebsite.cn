@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78E82590-A72C-4050-873F-BFE5F3EC6CCB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MYHGTOOLS</RootNamespace>
+    <AssemblyName>MYHGTOOLS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\MYHGTOOLS.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zlib.net">
+      <HintPath>dll\zlib.net.dll</HintPath>
+    </Reference>
+    <Reference Include="zlibnet">
+      <HintPath>dll\zlibnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="code93\Code93Operation.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="com\CommandInfo.cs" />
+    <Compile Include="ConfigHelper.cs" />
+    <Compile Include="ConvertoJSON.cs" />
+    <Compile Include="ConvertXMLToDataSet.cs" />
+    <Compile Include="ConvertXMLToJson.cs" />
+    <Compile Include="CookieOperation.cs" />
+    <Compile Include="CreateSql.cs" />
+    <Compile Include="DataCache.cs" />
+    <Compile Include="DataCompressHelper.cs" />
+    <Compile Include="DataTableHandler.cs" />
+    <Compile Include="DbHelperOra.cs" />
+    <Compile Include="DbHelperSQL.cs" />
+    <Compile Include="DirFile.cs" />
+    <Compile Include="EntityHandler.cs" />
+    <Compile Include="FTP\FtpOpreation.cs" />
+    <Compile Include="FTP\FTPTools.cs" />
+    <Compile Include="HGEncryptAndDes.cs" />
+    <Compile Include="IpOperation.cs" />
+    <Compile Include="JsonToModel.cs" />
+    <Compile Include="jsonTools\FileIO.cs" />
+    <Compile Include="jsonTools\FileItem.cs" />
+    <Compile Include="jsonTools\SMS.cs" />
+    <Compile Include="jsonTools\Tools.cs" />
+    <Compile Include="Login\BaseLogin.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\CookieHandler.cs" />
+    <Compile Include="Login\SafeHandler.cs" />
+    <Compile Include="Login\SessionHandler.cs" />
+    <Compile Include="Login\UserSet.cs" />
+    <Compile Include="LogMessage.cs" />
+    <Compile Include="models\sParams.cs" />
+    <Compile Include="ORACLEProtectOperation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="returnTopJson.cs" />
+    <Compile Include="SafetyOperations.cs" />
+    <Compile Include="SQLProtectOperation.cs" />
+    <Compile Include="SqlServerProvider.cs" />
+    <Compile Include="sqls\Sql.cs" />
+    <Compile Include="StringOperation.cs" />
+    <Compile Include="StrOperation.cs" />
+    <Compile Include="jsonTools\WebUtils.cs" />
+    <Compile Include="XmlControl.cs" />
+    <Compile Include="XmlHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
